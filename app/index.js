@@ -20,8 +20,26 @@ const Home = () => {
           headerStyle: {
             backgroundColor: COLORS.lightWhite,
           },
+          headerShadowVisible: false,
+          headerLeft: () => (
+            <ScreenHeaderBtn
+              iconUrl={icons.menu}
+              dimension='60%'
+              handlePress={() => router.back()}
+            />
+          ),
+          headerRight: () => (
+            <ScreenHeaderBtn
+              iconUrl={icons.profile}
+              dimension='100%'
+              handlePress={() => router.back()}
+            />
+          ),
+          headerTitle: "",
         }}
       />
+
+      <ScrollView showsVerticalScrollIndicator={false}> </ScrollView>
     </SafeAreaView>
   );
 };
